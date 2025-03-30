@@ -6,7 +6,8 @@ const markdownDirectoryPath = path.join(__dirname, 'Markdown')
 const outputDirectoryPath = path.join(__dirname, 'Html')
 
 fs.readdirSync(markdownDirectoryPath).forEach((markdown) => {
-    const markedDown = fs.readFileSync(markdownDirectoryPath + '/' + markdown, 'utf-8');
+    if(markdown.endsWith('.md')){
+      const markedDown = fs.readFileSync(markdownDirectoryPath + '/' + markdown, 'utf-8');
     const markdownParts = markdown.split(/\./)
     fs.appendFileSync(outputDirectoryPath + '/' + markdownParts[0] + '.html', `<!DOCTYPE html>
             <!DOCTYPE html>
@@ -30,7 +31,7 @@ fs.readdirSync(markdownDirectoryPath).forEach((markdown) => {
 </html>`, (err) => {
         throw new Error('there was an error while creating compiled file!\n', err)
     })
-
+    }
 })
 
 
