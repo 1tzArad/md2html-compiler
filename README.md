@@ -3,18 +3,20 @@ A simple and efficient Markdown-to-HTML compiler that converts .md files into cl
 
 # 📥 Installation
 
-just install packages with
+Just install the packages with:
 ```bash
 npm i
 ```
 
-then run with:
+Then run with:
+
 ```bash
 node index.js
 ```
 
 # 🚀 Usage
-just create a markdown file into `Markdown` directory and write what you want to compile into html and run:
+Just create a Markdown file in the Markdown directory, write what you want to compile into HTML, and run:
+
 ```bash 
 node index.js
 ```
